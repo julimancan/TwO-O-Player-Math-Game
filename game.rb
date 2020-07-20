@@ -2,10 +2,13 @@
 class Game
   attr_reader :player1, :player2
 
-  # keeps track of the game and whos turn it is
   def initialize
-    @player1 = Player.new("Player 1")
-    @player2 = Player.new("Player 2")
+    puts "Player 1 what is your name?"
+    p1 =  $stdin.gets.chomp.to_s
+    @player1 = Player.new(p1)
+    puts "Player 2 what is your name?"
+    p2 =  $stdin.gets.chomp.to_s
+    @player2 = Player.new(p2)
   end
 
   def start 
